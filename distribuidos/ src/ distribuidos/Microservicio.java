@@ -32,9 +32,9 @@ public class Microservicio implements Servidor.Iface {
         Cache con =new Cache();
         gifts=con.guardarCache();
         for(Gift gift: gifts){
-            System.out.println(gift);
-       }
-     }
+            System.out.println(gift)
+                ;
+   }'';     }
 
     @Override
     public String top10(String dato1) throws TException {
