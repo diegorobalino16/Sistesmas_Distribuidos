@@ -27,5 +27,10 @@ public class Gift implements Comparable<Gift>, Serializable {
         this.link = link;
         this.Descripcion = Descripcion;
     }
-
+public int getId() {
+        return id;
+    }
+ public void setId(int id) {
+        this.id = id;
+    }
 }
