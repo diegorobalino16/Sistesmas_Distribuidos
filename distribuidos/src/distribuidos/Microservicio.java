@@ -16,7 +16,7 @@ import org.apache.thrift.TException;
 
 /**
  *
- * @author ARAUZ - ROBALINO - ZUQUINAULA
+ * @author ARAUZ - ROBALINO - SUQUINAHUA
  */
 public class Microservicio implements Servidor.Iface {
 

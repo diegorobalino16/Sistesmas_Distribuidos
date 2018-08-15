@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author ARAUZ - ROBALINO - ZUQUINAULA
+ * @author ARAUZ - ROBALINO - SUQUINAHUA
  */
 public class Gift implements Comparable<Gift>, Serializable {
    private int id;
