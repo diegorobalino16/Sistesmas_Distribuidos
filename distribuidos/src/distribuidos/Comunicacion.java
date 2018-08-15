@@ -5,6 +5,10 @@
  */
 package distribuidos;
 
+
+import org.apache.thrift.server.TServer;
+import org.apache.thrift.server.TThreadPoolServer;
+import org.apache.thrift.transport.TServerSocket;
 /**
  *
  * @author RAFAEL
@@ -15,10 +19,15 @@ public class Comunicacion  implements Runnable{
         while (true) {      
             //FALTA AGREGAR LINEAS DE CODIGO
             
+            
             try {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                TServerSocket serverTransport = new TServerSocket(7911);
+                
+                
+                System.err.println("Servidor en escucha puerto 7911...");
     }catch (Exception e) {
-        System.out.println("No se puede escuchar el puerto");
+        System.out.println("No se puede escuchar el puerto 7911");
     }
          }
     }
