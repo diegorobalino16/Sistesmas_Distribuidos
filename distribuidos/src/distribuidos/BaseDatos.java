@@ -22,7 +22,7 @@ public class BaseDatos {
        try {
             Class.forName("com.mysql.jdbc.Driver");
             //Conexion con la base de datos, usuario y clave
-            cnx = DriverManager.getConnection("jdbc:mysql://localhost/datos", "rvivanco", "hotmail003");
+            cnx = DriverManager.getConnection("jdbc:mysql://localhost/datos", "diegorobaliono16", "diegoespol10");
             //se establece la conexion
             Statement st= cnx.createStatement();
             System.out.println("Se establecio con exito la conexion");
@@ -49,6 +49,15 @@ public class BaseDatos {
             for (int i = 0; i < 10; i++) {
                top10.add(lista.get(i));
            }
+            return top10;
+            
+         } catch (Exception ex) {
+             System.out.println("No se pudo conectar a la Base de datos");
+         }
+       return null;
+   }
+  
+}
+
            
     
-}
