@@ -23,12 +23,13 @@ public class Convertidor {
     FileWriter crear = null; 
     
     String[] phones =null;
+    String[] texto1=null;
     
 
     public void leer(){
            
        archivo = new File ("datos.txt");
-       //archivo1 = new File("datos1.csv");  
+       archivo1 = new File("datos1.csv");  
        try {
             crear = new FileWriter(archivo1); 
             fr = new FileReader (archivo);
@@ -45,6 +46,12 @@ public class Convertidor {
                   crear.write(acum+",");
                   crear.write(numero+",");
                   crear.write(phones[0]+",");
+                  texto=phones[1];
+                  texto1= texto.split(",");
+                  texto="";
+                  for (int i = 0; i <texto1.length; i++) {
+                    texto=texto+texto1[i];
+                  }
             }
     }
        catch(Exception e){
