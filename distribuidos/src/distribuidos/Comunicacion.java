@@ -25,7 +25,7 @@ public class Comunicacion  implements Runnable{
                 TServerSocket serverTransport = new TServerSocket(7911);
                 
                 
-                System.err.println("Servidor en escucha puerto 7911...");
+                System.err.println("Servidor en escucha puerto 7911.....");
     }catch (Exception e) {
         System.out.println("No se puede escuchar el puerto 7911");
     }
