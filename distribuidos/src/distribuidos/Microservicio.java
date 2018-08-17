@@ -5,7 +5,7 @@
  */
 package distribuidos;
 
-//import Thrift.Servidor;
+import Thrift.Servidor;
 import java.util.LinkedList;
 import org.apache.thrift.TException;
 
