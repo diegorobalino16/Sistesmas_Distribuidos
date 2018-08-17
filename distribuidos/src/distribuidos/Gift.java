@@ -66,4 +66,10 @@ public int getId() {
        }
        return 0;
     }
+    
+     @Override
+    public String toString() {
+        return  id + "," + visitas + "," + link + "," + Descripcion ;
+    }
+    
 }
