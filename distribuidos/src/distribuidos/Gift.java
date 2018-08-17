@@ -40,4 +40,12 @@ public int getId() {
     public void setVisitas(int visitas) {
         this.visitas = visitas;
     }
+    
+     public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
 }
