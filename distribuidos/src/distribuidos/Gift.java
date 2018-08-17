@@ -55,4 +55,15 @@ public int getId() {
     public void setDescripcion(String Descripcion) {
         this.Descripcion = Descripcion;
     }
+    
+     @Override
+    public int compareTo(Gift o) {
+       if (visitas<o.visitas){
+           return 1;
+       }
+       if (visitas>o.visitas){
+           return -1;
+       }
+       return 0;
+    }
 }
