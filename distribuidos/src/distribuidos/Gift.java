@@ -48,4 +48,11 @@ public int getId() {
     public void setLink(String link) {
         this.link = link;
     }
+     public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
+    }
 }
