@@ -33,4 +33,11 @@ public int getId() {
  public void setId(int id) {
         this.id = id;
     }
+  public int getVisitas() {
+        return visitas;
+    }
+
+    public void setVisitas(int visitas) {
+        this.visitas = visitas;
+    }
 }
