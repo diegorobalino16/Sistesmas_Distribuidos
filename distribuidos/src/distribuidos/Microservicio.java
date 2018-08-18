@@ -35,7 +35,7 @@ public class Microservicio implements Servidor.Iface {
     @Override
     public String top10(String dato1) throws TException {
         Cache con =new Cache();
-        //gifts=con.guardarCache();
+        //gifts=con.guardarCache();;
         for(Gift gift: gifts){
             System.out.println(gift);
        } 
