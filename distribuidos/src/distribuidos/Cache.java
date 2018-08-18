@@ -20,8 +20,27 @@ public class Cache {
        //El puerto default de memcached es 11211
         InetSocketAddress[] servers = new InetSocketAddress[]{ new InetSocketAddress("127.0.0.1", 11211)};
         MemcachedClient mc;
-    
-    
-     return null;
-    }
+        try {
+            mc = new MemcachedClient(servers);
+           LinkedList<Gift> gift=null;
+            //Cuando pase una hora, esto nos devolverá null
+            
+            if (mc.get("gift")==(null)){
+                LinkedList<Gift> lista=datos.obtenerTop10();
+                //Así almacenamos un valor
+                //se pasa llave, duración en segundos, valor
+                mc.set("gift", 86400, lista);
+                //Lo siguiente funcionará durante una hora
+                gift = (LinkedList<Gift>)mc.get("gift");
+            }else{
+                gift = (LinkedList<Gift>)mc.get("gift");
+            }
+          
+            mc.shutdown();
+            return gift;
+        } catch (IOException ex) {
+            System.out.println("ERROR");
+        }
+       return null;
+   }
 }
