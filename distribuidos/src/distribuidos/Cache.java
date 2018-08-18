@@ -22,5 +22,6 @@ public class Cache {
         MemcachedClient mc;
     
     
-    
+     return null;
+    }
 }

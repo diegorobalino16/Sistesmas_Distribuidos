@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -52,11 +55,25 @@ public class Convertidor {
                   for (int i = 0; i <texto1.length; i++) {
                     texto=texto+texto1[i];
                   }
+                  crear.write(texto+"\n");
+                  acum++;
             }
     }
        catch(Exception e){
             System.out.println("No se pudo abrir el archivo");
             e.printStackTrace();
+       }finally{
+        // En el finally cerramos el fichero, para asegurarnos
+        // que se cierra tanto si todo va bien como si salta 
+        // una excepcion.
+            try{
+              if( null != fr ){
+                 fr.close();
+                 crear.close ();
+              }
+            }catch (Exception e2){
+              e2.printStackTrace();
+            }
         }
        
  

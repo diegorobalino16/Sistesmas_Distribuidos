@@ -37,9 +37,9 @@ public class BaseDatos {
                 not=new Gift();
                 //guardamos en un Gift cada parametro 
                 not.setId(resultado.getInt("Id"));
-                //not.setVisitas(resultado.getInt("Visitas"));
-                //not.setLink(resultado.getString("Link"));
-                //not.setDescripcion(resultado.getString("Descripción"));
+                not.setVisitas(resultado.getInt("Visitas"));
+                not.setLink(resultado.getString("Link"));
+                not.setDescripcion(resultado.getString("Descripción"));
                 lista.add(not);
             }
                //Ordenamos la lista de gift segun las visitas de mayor a menor 
