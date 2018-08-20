@@ -24,9 +24,10 @@ public class Comunicacion  implements Runnable{
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
                 TServerSocket serverTransport = new TServerSocket(7911);
                 Servidor.Processor processor = new Servidor.Processor (new Microservicio());
-                
+                TServer server = new TThreadPoolServer(new TThreadPoolServer.Args(serverTransport).processor(processor));
                 
                 System.err.println("Servidor en escucha puerto 7911.....");
+                server.serve();
     }catch (Exception e) {
         System.out.println("No se puede escuchar el puerto 7911");
     }

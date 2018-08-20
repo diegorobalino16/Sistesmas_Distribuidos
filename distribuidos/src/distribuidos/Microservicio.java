@@ -25,17 +25,21 @@ public class Microservicio implements Servidor.Iface {
 //        Convertidor cv =new Convertidor();
 //        cv.leer();
         Cache con =new Cache();
-       // gifts=con.guardarCache();
+        gifts=con.guardarCache();
         for(Gift gift: gifts){
             System.out.println(gift);
                 
         }    
+        Comunicacion hs = new Comunicacion();
+        Thread t = new Thread(hs);
+        t.start();
+        
     }
 
     @Override
     public String top10(String dato1) throws TException {
         Cache con =new Cache();
-        //gifts=con.guardarCache();
+        gifts=con.guardarCache();
         for(Gift gift: gifts){
             System.out.println(gift);
        } 
